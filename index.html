@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ग्रामपंचायत हिवरगाव पावसा</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home"><span>ग्रा</span><div><b>हिवरगाव पावसा</b><small>ग्रामपंचायत</small></div></a><button id="menu">☰</button><nav id="links"><a href="#home">मुख्यपृष्ठ</a><a href="#about">गावाविषयी</a><a href="#services">सेवा</a><a href="#projects">विकास</a><a href="#updates">सूचना</a><a href="#funding">निधी</a><a href="#contact">संपर्क</a></nav><div class="header-right"><span id="liveDate"></span><a class="admin" href="admin.html">Admin</a></div></div></header>
+
+<section class="hero" id="home"><div class="hero-bg"></div><div class="shade"></div><div class="wrap hero-text"><p>आपले गाव • आपली ग्रामपंचायत</p><h1>ग्रामपंचायत हिवरगाव पावसा</h1><h3>पारदर्शक प्रशासन, डिजिटल नागरिक सेवा आणि सर्वसमावेशक ग्रामविकास.</h3><div><a href="#services">नागरिक सेवा →</a><a href="#projects" class="outline">विकासकामे पाहा</a></div></div></section>
+
+<section class="ticker"><b>ताज्या सूचना</b><span id="ticker"></span></section>
+
+<section class="stats"><div class="wrap grid4"><article><b>24×7</b><span>Digital Info</span></article><article><b>6+</b><span>Citizen Services</span></article><article><b id="projectCount">4</b><span>Live Projects</span></article><article><b>100%</b><span>Mobile Ready</span></article></div></section>
+
+<section class="section about" id="about"><div class="wrap split"><div><p class="kicker">SMART VILLAGE EXPERIENCE</p><h2>परंपरा जपत स्मार्ट ग्रामविकास</h2><p>सेवा, शासकीय योजना, ग्रामसभा सूचना, विकासकामांची प्रगती आणि नागरिक संपर्क एका डिजिटल प्लॅटफॉर्मवर.</p><div class="population"><article><b id="pTotal"></b><span>एकूण लोकसंख्या</span></article><article><b id="pMale"></b><span>पुरुष</span></article><article><b id="pFemale"></b><span>महिला</span></article><article><b id="pFamilies"></b><span>कुटुंबे</span></article></div></div><aside><div>▤</div><h3>एक गाव, एक डिजिटल प्रवेशद्वार</h3><p>सेवा, सूचना, विकास आणि निधीची माहिती एका क्लिकवर.</p></aside></div></section>
+
+<section class="section"><div class="wrap"><div class="title"><p>CITIZEN LEADERSHIP</p><h2>पदाधिकारी</h2></div><div class="grid3 officials"><article><i>SG</i><em>सरपंच</em><h3>Mr. Subhash Gadakh</h3><p>Gram Panchayat Hiwargaon Pawasa</p></article><article><i>SD</i><em>उपसरपंच</em><h3>Ms. Sujata Dawange</h3><p>Gram Panchayat Hiwargaon Pawasa</p></article><article><i>HG</i><em>ग्रामसेवक</em><h3>Mr. Harish Gadakh</h3><p>Gram Panchayat Hiwargaon Pawasa</p></article></div></div></section>
+
+<section class="section services" id="services"><div class="wrap"><div class="title"><p>CITIZEN FIRST</p><h2>स्मार्ट नागरिक सेवा</h2></div><input id="search" placeholder="उदा. जन्म दाखला, पाणीपट्टी..."><div class="grid3 service-grid">
+<button data-name="जन्म दाखला"><span>📄</span><b>जन्म दाखला</b><small>आवश्यक कागदपत्रे</small><i>→</i></button>
+<button data-name="मृत्यू दाखला"><span>📄</span><b>मृत्यू दाखला</b><small>आवश्यक कागदपत्रे</small><i>→</i></button>
+<button data-name="घरपट्टी माहिती"><span>⌂</span><b>घरपट्टी माहिती</b><small>आवश्यक कागदपत्रे</small><i>→</i></button>
+<button data-name="पाणीपट्टी सेवा"><span>💧</span><b>पाणीपट्टी सेवा</b><small>आवश्यक कागदपत्रे</small><i>→</i></button>
+<button data-name="तक्रार नोंदणी"><span>🛡️</span><b>तक्रार नोंदणी</b><small>फोटोसह तक्रार</small><i>→</i></button>
+<button data-name="आरटीआय अर्ज"><span>🏛️</span><b>आरटीआय अर्ज</b><small>आवश्यक कागदपत्रे</small><i>→</i></button>
+</div></div></section>
+
+<section class="section projects" id="projects"><div class="wrap"><div class="title light"><p>LIVE TRANSPARENCY</p><h2>विकासकामांचा लाईव्ह ट्रॅकर</h2></div><div id="projectsGrid" class="grid2"></div><div class="report-actions"><a href="assets/village-development-report.pdf" download class="download">प्रकल्प अहवाल PDF डाउनलोड करा</a><a href="assets/complete-village-report.pdf" download class="download secondary-download">संपूर्ण ग्रामपंचायत अहवाल PDF</a><button id="printProjects" class="download print-btn">प्रकल्प माहिती Print / PDF</button></div></div></section>
+
+<section class="section updates" id="updates"><div class="wrap"><div class="title"><p>UPDATES</p><h2>सूचना व ग्रामसभा</h2></div><div class="grid2"><div id="noticeList"></div><div class="calendar"><h3>लाईव्ह कार्यक्रम दिनदर्शिका</h3><p class="today-line">आज: <b id="todayText"></b></p><div class="cal-head"><button id="prev">‹</button><b id="month"></b><button id="next">›</button></div><div class="week"><span>रवि</span><span>सोम</span><span>मंगळ</span><span>बुध</span><span>गुरु</span><span>शुक्र</span><span>शनि</span></div><div id="days" class="days"></div></div></div></div></section>
+
+<section class="section funding" id="funding"><div class="wrap"><div class="title"><p>PUBLIC FUNDING</p><h2>शासकीय निधी व प्रकल्प गुंतवणूक</h2></div><div id="fundSummary" class="grid3"></div><div class="table"><table><thead><tr><th>निधी स्रोत</th><th>वर्ष</th><th>मंजूर</th><th>प्राप्त</th><th>वापर</th></tr></thead><tbody id="fundRows"></tbody></table></div></div></section>
+
+<section class="section"><div class="wrap"><div class="title"><p>DAILY NEWS</p><h2>ताज्या बातम्या</h2></div><div id="newsGrid" class="grid3 news"></div></div></section>
+
+<section class="section gallery"><div class="wrap"><div class="title"><p>PHOTO GALLERY</p><h2>गावातील क्षणचित्रे</h2></div><div class="grid2 gallery-grid"><img src="assets/village-office-hd-1.jpg" alt="Village office event"><img src="assets/village-office-hd-2.jpg" alt="Village event"></div></div></section>
+
+<section class="section contact" id="contact"><div class="wrap split"><div><p class="kicker">CONTACT</p><h2>संपर्क व तक्रार नोंदणी</h2><p>📍 ग्रामपंचायत हिवरगाव पावसा, ता. संगमनेर</p><p>📞 +91 95036 24087</p><p>✉ shubhampawase012@gmail.com</p><a class="whatsapp-link" href="https://wa.me/919503624087" target="_blank">WhatsApp संपर्क</a></div>
+<form id="complaintForm" action="https://formsubmit.co/shubhampawase012@gmail.com" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="_subject" value="New GP Website Submission"><input type="hidden" name="_captcha" value="false">
+<label>पूर्ण नाव<input required name="name"></label><label>ई-मेल<input required type="email" name="email"></label><label>मोबाईल क्रमांक<input required name="mobile"></label><label>सेवा / तक्रार प्रकार<select required name="type"><option value="">निवडा</option><option>तक्रार नोंदणी</option><option>जन्म दाखला</option><option>मृत्यू दाखला</option><option>घरपट्टी / पाणीपट्टी</option><option>इतर</option></select></label><label>तपशील<textarea required rows="5" name="message"></textarea></label><label>फोटो / कागदपत्र<input id="file" type="file" name="attachment" accept="image/*,.pdf"></label><small>फोटो किंवा PDF, कमाल 5 MB.</small><button type="submit">ई-मेलद्वारे सबमिट करा →</button><button type="button" id="wa">WhatsApp वर तपशील पाठवा</button></form></div></section>
+
+<footer><div class="wrap">© 2026 ग्रामपंचायत हिवरगाव पावसा · <a href="admin.html">Admin Update Panel</a></div></footer>
+
+<dialog id="dlg"><button id="close">×</button><h3 id="dlgTitle"></h3><h4>आवश्यक कागदपत्रे</h4><ul><li>समस्येचा तपशील</li><li>फोटो (असल्यास)</li><li>संपर्क क्रमांक</li></ul><a href="#contact" id="apply">अर्ज / तक्रार सबमिट करा</a></dialog>
+<script src="site-data.js"></script><script src="script.js"></script>
+</body></html>
