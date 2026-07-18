@@ -25,7 +25,7 @@ search.oninput=()=>document.querySelectorAll('.service-grid button').forEach(b=>
 document.querySelectorAll('.service-grid button').forEach(b=>b.onclick=()=>{dlgTitle.textContent=b.dataset.name;dlg.showModal()});
 close.onclick=()=>dlg.close();apply.onclick=()=>dlg.close();
 file.onchange=()=>{if(file.files[0]&&file.files[0].size>5*1024*1024){alert('फाइल 5 MB पेक्षा कमी असावी');file.value=''}};
-wa.onclick=()=>{const form=document.getElementById('complaintForm');const msg=`नवीन ग्रामपंचायत अर्ज/तक्रार%0Aनाव: ${encodeURIComponent(form.name.value)}%0Aमोबाईल: ${encodeURIComponent(form.mobile.value)}%0Aप्रकार: ${encodeURIComponent(form.type.value)}%0Aतपशील: ${encodeURIComponent(form.message.value)}%0Aफोटो WhatsApp मध्ये स्वतंत्रपणे जोडा.`;window.open('https://wa.me/919503624087?text='+msg,'_blank')};
+
 printProjects.onclick=()=>window.print();
 
 let cd=new Date();
@@ -44,3 +44,43 @@ function cal(){
   days.innerHTML=h;
 }
 prev.onclick=()=>{cd.setMonth(cd.getMonth()-1);cal()};next.onclick=()=>{cd.setMonth(cd.getMonth()+1);cal()};cal();
+
+
+const nextUrlField = document.getElementById("nextUrl");
+if (nextUrlField) {
+  const basePath = location.href.substring(0, location.href.lastIndexOf("/") + 1);
+  nextUrlField.value = basePath + "success.html";
+}
+
+const complaintForm = document.getElementById("complaintForm");
+const whatsappButton = document.getElementById("wa");
+
+if (whatsappButton && complaintForm) {
+  whatsappButton.addEventListener("click", () => {
+    const formData = new FormData(complaintForm);
+    const name = String(formData.get("name") || "").trim();
+    const mobile = String(formData.get("mobile") || "").trim();
+    const type = String(formData.get("type") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    if (!name || !mobile || !type || !message) {
+      alert("कृपया नाव, मोबाईल क्रमांक, तक्रार प्रकार आणि तपशील भरा.");
+      return;
+    }
+
+    const text =
+`नवीन ग्रामपंचायत अर्ज / तक्रार
+
+नाव: ${name}
+मोबाईल: ${mobile}
+प्रकार: ${type}
+तपशील: ${message}
+
+आपली तक्रार प्राप्त झाली आहे. संबंधित विभाग तपासणी करून आवश्यक ती कार्यवाही करेल.
+
+टीप: फोटो किंवा कागदपत्र WhatsApp मध्ये स्वतंत्रपणे जोडा.`;
+
+    const whatsappUrl = `https://wa.me/919503624087?text=${encodeURIComponent(text)}`;
+    window.location.href = whatsappUrl;
+  });
+}

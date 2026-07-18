@@ -11,3 +11,5 @@
 .days button.today{outline:3px solid #ffb04a;font-weight:900}
 .days button.event{position:relative}.days button.event:after{content:"";position:absolute;bottom:7px;left:50%;width:6px;height:6px;border-radius:50%;background:#0a9a68;transform:translateX(-50%)}
 @media(max-width:900px){.header-right #liveDate{display:none}.gallery-grid img{height:280px}}
+
+.submit-help{font-size:12px;color:#71847c;line-height:1.6;margin-top:12px}
